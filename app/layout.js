@@ -1,17 +1,11 @@
-import { Roboto, Bokor} from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import NavBarComponent from "@/components/NavbarComponent";
 
 const ro = Roboto({
   subsets: ["cyrillic"],
-  weight:"400"
+  weight: "400",
 });
-
-const khFont = Bokor({
-  subsets:["latin"],
-  weight:"400"
-});
-
 
 export const metadata = {
   title: "Sokpheng - Portfolio",
@@ -21,11 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${ro.className} antialiased`}
-      >
-        <NavBarComponent/>
+      <body className={`${ro.className} antialiased`}>
+        <NavBarComponent />
         {children}
+        <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   );
